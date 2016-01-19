@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gnw-HY-QAO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dreams View Controller-->
+        <scene sceneID="avM-sb-Hm9">
+            <objects>
+                <tableViewController id="kUN-12-ci0" userLabel="Dreams View Controller" customClass="DreamsViewController" customModule="Dreams2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DxS-dJ-Ci8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="DreamCell" id="MHW-BB-Jgh">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MHW-BB-Jgh" id="4gW-8u-Iwo">
+                                    <rect key="frame" x="0.0" y="0.0" width="533" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kUN-12-ci0" id="MzQ-bx-23x"/>
+                            <outlet property="delegate" destination="kUN-12-ci0" id="r1q-iV-shl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Dreams" id="Fc2-1s-uQc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="L0s-ZH-AYH">
+                            <connections>
+                                <segue destination="c9f-3l-jkM" kind="presentation" identifier="AddNewDream" id="hZ0-YT-JeN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="c9f-3l-jkM" kind="presentation" identifier="EditDream" id="5Wf-S6-x7n"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ipv-Ic-ukB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="401"/>
+        </scene>
+        <!--Dreams Details View Controller-->
+        <scene sceneID="9rF-C6-r2E">
+            <objects>
+                <tableViewController id="yPV-WF-dSF" userLabel="Dreams Details View Controller" customClass="DreamDetailsViewController" customModule="Dreams2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="xQM-02-drQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="Zz8-qz-iCV">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lPd-cI-FuH">
+                                        <rect key="frame" x="0.0" y="99" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lPd-cI-FuH" id="FB5-y8-JYV">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ox-mP-BS0">
+                                                    <rect key="frame" x="8" y="8" width="584" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0ox-mP-BS0" firstAttribute="top" secondItem="FB5-y8-JYV" secondAttribute="topMargin" id="2xx-63-8xF"/>
+                                                <constraint firstItem="0ox-mP-BS0" firstAttribute="leading" secondItem="FB5-y8-JYV" secondAttribute="leadingMargin" id="IER-qp-X6O"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0ox-mP-BS0" secondAttribute="trailing" id="Rxb-GM-Zub"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0ox-mP-BS0" secondAttribute="bottom" id="qip-Sg-8va"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="yPV-WF-dSF" id="fbk-FW-Ma4"/>
+                            <outlet property="delegate" destination="yPV-WF-dSF" id="nwB-0y-3p9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="F8V-fD-Y5X">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NGi-Ps-Wot">
+                            <connections>
+                                <action selector="cancelBarButtonPressed:" destination="yPV-WF-dSF" id="xLG-4G-kJq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Ue7-eF-LK9">
+                            <connections>
+                                <action selector="doneBarButtonPressed:" destination="yPV-WF-dSF" id="TlU-P0-xq5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="newDreamTextField" destination="0ox-mP-BS0" id="5SX-sd-tk3"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FYk-sx-QNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2634" y="401"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QRd-fH-jyR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gnw-HY-QAO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGD-9b-mAK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kUN-12-ci0" kind="relationship" relationship="rootViewController" id="A19-J0-iwt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRV-vv-I3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="401"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Ct-ao-fTc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c9f-3l-jkM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WLQ-wx-OSF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yPV-WF-dSF" kind="relationship" relationship="rootViewController" id="RmH-mT-0vo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MF6-gV-c9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="401"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5Wf-S6-x7n"/>
+    </inferredMetricsTieBreakers>
+</document>
